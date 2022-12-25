@@ -1,5 +1,6 @@
 import React from 'react';
 import './Product.css'
+import Modal from '../Modal/Modal';
 
 const Product = (props) => {
     const {product, addToCartButton} = props;
@@ -15,6 +16,7 @@ const Product = (props) => {
     <h3 className='font-black'>Price: ${price}</h3>
     <div className="card-actions">
       <button onClick={() => addToCartButton()} className="btn btn-primary">Add to Cart</button>
+      <Modal product={product}></Modal>
     </div>
   </div>
 </div>
